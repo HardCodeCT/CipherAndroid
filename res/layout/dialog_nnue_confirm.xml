@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_bg"
+    android:padding="24dp">
+
+    <!-- Icon -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="⬇"
+        android:textSize="36sp"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Download Required"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Body -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="The engine requires a neural network file (NNUE) to evaluate positions.\n\nFile size: ~47 MB\n\nThis is a one-time download. Make sure you are on Wi-Fi before proceeding."
+        android:textColor="#cbd5e1"
+        android:textSize="14sp"
+        android:lineSpacingMultiplier="1.4"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Cancel"
+            android:textColor="#94a3b8"
+            android:backgroundTint="#1e293b"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btnProceed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Download"
+            android:textColor="#ffffff"
+            android:backgroundTint="#2563eb"
+            android:layout_marginStart="8dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- ═══════════════ Existing screen content ═══════════════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#1a1a2e">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="♞ Cipher"
+            android:textColor="#e2e8f0"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cipher engine  •  ws://localhost:8765"
+            android:textColor="#94a3b8"
+            android:textSize="13sp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/btnStart"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="▶ Start"
+                android:backgroundTint="#2563eb"
+                android:textColor="#ffffff"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btnStop"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="■ Stop"
+                android:backgroundTint="#dc2626"
+                android:textColor="#ffffff"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- Hint -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1. Tap Start  →  2. Open Kiwi Browser  →  3. Play on Lichess"
+            android:textColor="#64748b"
+            android:textSize="12sp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Log -->
+        <ScrollView
+            android:id="@+id/logScroll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#0f172a"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/logView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#93c5fd"
+                android:textSize="12sp"
+                android:fontFamily="monospace"
+                android:text="" />
+        </ScrollView>
+
+    </LinearLayout>
+
+    <!-- ═══════════════ Overlay scrim + centered "Read me" card ═══════════════ -->
+    <FrameLayout
+        android:id="@+id/readmeOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99000000"
+        android:clickable="true"
+        android:focusable="true">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Read me"
+                    android:textColor="#1A1A1A"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="If the best move fails to show up in your browser, stop the engine and restart it, then refresh the page. This mostly happens on devices with lower-end hardware or limited RAM."
+                    android:textColor="#444444"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:lineSpacingExtra="2dp" />
+
+                <Button
+                    android:id="@+id/btnDismissReadme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:text="Got it"
+                    android:textColor="#2563eb"
+                    android:background="@android:color/transparent" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+</FrameLayout>
